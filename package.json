@@ -1,0 +1,35 @@
+{
+  "name": "logs.chat",
+  "version": "1.0.0",
+  "description": "A chat logs online saver for discord bots to save messages history & cleared messages online",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "logs chat",
+    "clear chat",
+    "chat clear",
+    "clear chat history",
+    "cleared chat messages history",
+    "cleared messages",
+	"discord clear",
+	"discord chat",
+	"discord chat save",
+	"discord save",
+	"discord history",
+	"discord chat history",
+	"discord",
+	"discord bots",
+	"bot",
+	"discord bot",
+	"clear chat"
+  ],
+  "author": "TARIQ",
+  "license": "MIT",
+  "homepage": "https://logs.chat",
+  "repository": "http://github.com/1TGDev/logs.chat",
+  "dependencies": {
+    "node-fetch": "^2.6.1"
+  }
+}
