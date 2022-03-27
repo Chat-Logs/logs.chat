@@ -1,4 +1,4 @@
-# Clear Chat History
+# Chat Logs
 
 <center>
 	<a href="https://nodei.co/npm/logs.chat/">
