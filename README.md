@@ -40,7 +40,7 @@ it will return an object looks like this:
 ## Example
 
 ```js
-const chat = require('logs.chat');
+const chatLogs = require('logs.chat');
 const Discord = require('discord.js');
 const client = new Discord.Client({
 	"intents": [
@@ -62,7 +62,7 @@ client.on('messageCreate', async message => {
 
 	if (command === 'save') {
 		let messages = await message.channel.fetch();
-		let chat = await chat.create(messages);
+		let chat = await chatLogs.create(messages);
 		let embed = new Discord.MessageEmbed()
 			.setTitle(`Chat Created with ${messages.size} messages`)
 			.setColor("#7289DA")
