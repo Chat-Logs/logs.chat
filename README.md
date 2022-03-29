@@ -61,7 +61,7 @@ client.on('messageCreate', async message => {
 	const command = args.shift().toLowerCase();
 
 	if (command === 'save') {
-		let messages = await message.channel.fetch();
+		let messages = await message.channel.messages.fetch();
 		let chat = await chatLogs.create(messages);
 		let embed = new Discord.MessageEmbed()
 			.setTitle(`Chat Created with ${messages.size} messages`)
