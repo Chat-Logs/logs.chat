@@ -33,7 +33,7 @@ it will return an object looks like this:
 ```
 {
 	"url": "https://logs.chat/chat/1",
-	"code": "1"
+	"code": 1
 }
 ```
 
