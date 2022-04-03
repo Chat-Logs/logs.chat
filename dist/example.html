@@ -1,11 +1,18 @@
 <html>
 	<body>
+		<p>Get Chat</p>
 		<input onchange="getChat(this.value)" placeholder="Chat ID" />
+		<p>Chat Exists</p>
+		<input onchange="existsChat(this.value)" placeholder="Chat ID" />
 		<p>Test Chat ID: 1</p>
 		<script src="chat.js"></script>
 		<script>
 			async function getChat(id){
 				let data = await chat.get(id);
+				alert(JSON.stringify(data));
+			}
+			async function existsChat(id){
+				let data = await chat.exists(id);
 				alert(JSON.stringify(data));
 			}
 		</script>
