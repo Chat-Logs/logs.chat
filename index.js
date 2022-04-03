@@ -5,3 +5,4 @@ exports.version = packageInfo.version;
 // Methods
 exports.create = require('./methods/create');
 exports.get = require('./methods/get');
+exports.exists = require('./methods/exists');

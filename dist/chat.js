@@ -16,5 +16,10 @@ const chat = {
 		let data = await fetch(`https://logs.chat/api/chat/${arg}`).then(res => res.json());
 		if(data.error) return false;
 		return data.chat;
+	},
+	"exists": async function(arg){
+		if(!arg && !isNaN(arg)) throw Error ("logs.chat: exists method first argument must be a Chat ID");
+		let data = await fetch(`https://logs.chat/api/chat/${arg}/exists`).then(res => res.json());
+		return data;
 	}
 }

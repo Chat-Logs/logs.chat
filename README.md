@@ -26,16 +26,17 @@ Check out or website [Chat Logs](https://logs.chat).
 # Usage
 
 - `create(messages)` - Saves chat messages online
-    - `messages`: (REQUIRED) Array of messages
-
+    - `messages`: (REQUIRED) Discord Chat Messages Collection
 - `get(id)` - Gets a saved chat messages
+    - `id`: (REQUIRED) Chat ID
+- `exists(id)` - Check if a saved chat exists
     - `id`: (REQUIRED) Chat ID
 
 ##
 it will return an object looks like this:
 ```
 {
-	"code": "1",
+	"ID": "1",
 	"url": "https://logs.chat/chat/1"
 }
 ```
@@ -72,7 +73,7 @@ client.on('messageCreate', async message => {
 			.setThumbnail(message.guild.iconURL({dynamic:true}))
 			.setDescription(`[View Chat Online](${createdChat.url})`)
 			.addField("Channel", message.channel.toString(), true)
-			.addField("Chat Code", createdChat.code.toString(), true)
+			.addField("Chat Code", createdChat.code, true)
 		message.reply({embeds: [embed]});
 	}
 });
