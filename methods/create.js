@@ -9,9 +9,6 @@ module.exports = async function(arg){
 			'Content-Type': 'application/json'
 		}
 	}).then(res => res.json());
-	if(data.error){
-		throw Error(data.message);
-	}else{
-		return data;
-	}
+	if(data.error) throw Error(data.message);
+	return data;
 }

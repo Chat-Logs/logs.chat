@@ -28,12 +28,15 @@ Check out or website [Chat Logs](https://logs.chat).
 - `create(messages)` - Saves chat messages online
     - `messages`: (REQUIRED) Array of messages
 
+- `get(id)` - Gets a saved chat messages
+    - `id`: (REQUIRED) Chat ID
+
 ##
 it will return an object looks like this:
 ```
 {
-	"url": "https://logs.chat/chat/1",
-	"code": 1
+	"code": "1",
+	"url": "https://logs.chat/chat/1"
 }
 ```
 
@@ -62,16 +65,15 @@ client.on('messageCreate', async message => {
 
 	if (command === 'save') {
 		let messages = await message.channel.messages.fetch();
-		let chat = await chat.create(messages);
+		let createdChat = await chat.create(messages);
 		let embed = new Discord.MessageEmbed()
 			.setTitle(`Chat Created with ${messages.size} messages`)
-			.setColor("#7289DA")
+			.setColor("#00bd8d")
 			.setThumbnail(message.guild.iconURL({dynamic:true}))
-			.setDescription(`[View Chat Online](${chat.url})`)
-			.addField("Channel", message.channel, true)
-			.addField("Chat Code", chat.code, true)
-		message.channel.send({embeds: [embed]});
-		await message.delete();
+			.setDescription(`[View Chat Online](${createdChat.url})`)
+			.addField("Channel", message.channel.toString(), true)
+			.addField("Chat Code", createdChat.code.toString(), true)
+		message.reply({embeds: [embed]});
 	}
 });
 
