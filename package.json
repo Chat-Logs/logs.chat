@@ -1,6 +1,6 @@
 {
   "name": "logs.chat",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "A chat logs online saver for discord bots to save messages history & cleared messages online",
   "main": "index.js",
   "scripts": {
