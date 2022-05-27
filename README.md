@@ -34,7 +34,7 @@ Check out or website [Chat Logs](https://logs.chat).
 
 ##
 it will return an object looks like this:
-```
+```json
 {
 	"ID": "1",
 	"url": "https://logs.chat/chat/1"
