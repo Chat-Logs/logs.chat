@@ -73,7 +73,7 @@ client.on('messageCreate', async message => {
 			.setThumbnail(message.guild.iconURL({dynamic:true}))
 			.setDescription(`[View Chat Online](${createdChat.url})`)
 			.addField("Channel", message.channel.toString(), true)
-			.addField("Chat Code", createdChat.code, true)
+			.addField("Chat Code", createdChat.ID, true)
 		message.reply({embeds: [embed]});
 	}
 });
